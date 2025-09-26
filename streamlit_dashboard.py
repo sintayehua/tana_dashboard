@@ -38,7 +38,7 @@ st.markdown("""
 @st.cache_data
 def load_dashboard_data():
     try:
-        water_ts = pd.read_csv('./dashboard_data/water_extent_timeseries.csv')
+        water_ts = pd.read_csv('https://raw.githubusercontent.com/sintayehua/tana_dashboard/refs/heads/main/dashboard_data/water_extent_timeseries.csv')
         seasonal = pd.read_csv('./dashboard_data/seasonal_patterns.csv')
         lakes_comp = pd.read_csv('./dashboard_data/lake_comparison.csv')
         
