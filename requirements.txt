@@ -1,7 +1,10 @@
-
-streamlit==1.28.0
-pandas==2.0.3
-numpy==1.24.3
-plotly==5.15.0
-matplotlib==3.7.1
-pillow==10.0.0
+--find-links=https://girder.github.io/large_image_wheels GDAL
+geopandas
+leafmap
+owslib
+streamlit
+pandas
+numpy
+plotly
+matplotlib
+pillow
