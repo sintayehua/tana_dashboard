@@ -133,7 +133,7 @@ def show_overview(data):
         with col2_1:
             st.metric("Current Water Area", f"{metrics['current_water_extent']:,.0f} km²")
             st.metric("Historical Peak", f"{metrics['peak_water_extent']:,.0f} km²")
-            #st.metric("Historical Change", f"{metrics['percent_decline_since_1960']}%")
+            #st.metric("Historical Change", f"{metrics['percent_decline_since_1984']}%")
         
         with col2_2:
             st.metric("Annual Change Rate", f"{metrics['annual_change_rate']}%")
@@ -350,7 +350,7 @@ LAKE TANA WATER MONITORING - POLICY BRIEF
 
 KEY FINDINGS:
 • Current Water Area: {metrics['current_water_extent']} km²
-• Historical Change since 1960: {metrics['percent_decline_since_1960']}%
+• Historical Change since 1984: {metrics['percent_decline_since_1984']}%
 • {metrics['population_impacted']/1e6:.1f} million people depend on Lake Tana
 
 PRIORITY RECOMMENDATIONS:
