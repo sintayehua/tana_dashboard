@@ -96,6 +96,24 @@ def main():
         show_policy_actions(data)
     elif selected_view == "Management Insights":
         show_management_insights(data)
+        
+    # Footer with developer info
+    st.markdown("---")
+    st.markdown("### 👨‍💻 Developed by:")
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("**Sintayehu Adefires Abebe**")
+        st.markdown("PhD | Hydrology & Water Resources")
+
+    with col2:
+        st.markdown("**Connect with me:**")
+        st.markdown("[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sintayehu-adefires-abebe-47622347)")
+        st.markdown("[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sintayehua)")
+
+    st.markdown("<div style='text-align: center; margin-top: 20px;'>"
+                "Made with ❤️ using Streamlit"
+                "</div>", unsafe_allow_html=True)
     
     st.sidebar.markdown("---")
     st.sidebar.markdown("**Data Source:** Digital Earth Africa WOfS")
@@ -133,7 +151,7 @@ def show_overview(data):
         with col2_1:
             st.metric("Current Water Area", f"{metrics['current_water_extent']:,.0f} km²")
             st.metric("Historical Peak", f"{metrics['peak_water_extent']:,.0f} km²")
-            #st.metric("Historical Change", f"{metrics['percent_decline_since_1984']}%")
+            #st.metric("Historical Change", f"{metrics['percent_decline_since_1960']}%")
         
         with col2_2:
             st.metric("Annual Change Rate", f"{metrics['annual_change_rate']}%")
@@ -350,7 +368,7 @@ LAKE TANA WATER MONITORING - POLICY BRIEF
 
 KEY FINDINGS:
 • Current Water Area: {metrics['current_water_extent']} km²
-• Historical Change since 1984: {metrics['percent_decline_since_1984']}%
+• Historical Change since 1960: {metrics['percent_decline_since_1960']}%
 • {metrics['population_impacted']/1e6:.1f} million people depend on Lake Tana
 
 PRIORITY RECOMMENDATIONS:
